@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Александр Савилов](https://up.htmlacademy.ru/adaptive/25/user/2021641).
-* Наставник: `Дмитрий Иовлев`.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
