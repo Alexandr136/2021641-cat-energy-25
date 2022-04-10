@@ -41,14 +41,14 @@
   </header>
 
   <main class="main-form-container">
-    <div class="main-header">
-      <h1 class="main-header__title heading-primary">Подбор программы</h1>
-      <p class="main-header__text">
+    <div class="main-heading">
+      <h1 class="main-heading__title heading-primary">Подбор программы</h1>
+      <p class="main-heading__text">
         Заполните анкету, и мы подберем<br> программу питания для вашего кота
       </p>
     </div>
     <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form-program__pet">
         <legend class="visually-hidden">Данные питомца</legend>
         <ul class="form__list">
           <li class="form__item">
@@ -65,24 +65,30 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form-program__selection">
         <legend class="visually-hidden">Выбор программы</legend>
         <ul class="form__list">
           <li class="form__item">
-            <input class="form__input" type="radio" name="program" value="program1" id="weight-loss" checked>
-            <label class="form__label" for="weight-loss">Похудение</label>
+            <div class="radio">
+              <input class="radio__input" type="radio" name="program" value="program1" id="weight-loss" checked>
+              <label class="radio__label" for="weight-loss">Похудение</label>
+            </div>
           </li>
           <li class="form__item">
-            <input class="form__input" type="radio" name="program" value="program2" id="mass-gain">
-            <label class="form__label" for="mass-gain">Набор массы</label>
+            <div class="radio">
+              <input class="radio__input" type="radio" name="program" value="program2" id="mass-gain">
+              <label class="radio__label" for="mass-gain">Набор массы</label>
+            </div>
           </li>
           <li class="form__item">
-            <input class="form__input" type="radio" name="program" value="program3" id="need-advice">
-            <label class="form__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+            <div class="radio">
+              <input class="radio__input" type="radio" name="program" value="program3" id="need-advice">
+              <label class="radio__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+            </div>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form-program__owner">
         <legend class="form__title heading-secondary">Контактные данные (владельца кота)</legend>
         <ul class="form__list">
           <li class="form__item">
@@ -95,7 +101,7 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form-program__comment">
         <legend class="form__title heading-secondary">Комментарий</legend>
         <textarea class="form__input" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
@@ -103,20 +109,28 @@
         <legend class="form__title heading-secondary">Дополнительно</legend>
         <ul class="form__list">
           <li class="form__item">
-            <input class="form__input" type="checkbox" name="sweetener" id="box1" checked>
-            <label class="form__label" for="box1">сахарозаменитель</label>
+            <div calss="checkbox">
+              <input class="checkbox__input" type="checkbox" name="sweetener" id="box1" checked>
+              <label class="checkbox__label" for="box1">сахарозаменитель</label>
+            </div>
           </li>
           <li class="form__item">
-            <input class="form__input" type="checkbox" name="drinking-water" id="box2">
-            <label class="form__label" for="box2">питьевая вода</label>
+            <div calss="checkbox">
+              <input class="checkbox__input" type="checkbox" name="drinking-water" id="box2">
+              <label class="checkbox__label" for="box2">питьевая вода</label>
+            </div>
           </li>
           <li class="form__item">
-            <input class="form__input" type="checkbox" name="milk" id="box3">
-            <label class="form__label" for="box3">молоко</label>
+            <div calss="checkbox">
+              <input class="checkbox__input" type="checkbox" name="milk" id="box3">
+              <label class="checkbox__label" for="box3">молоко</label>
+            </div>
           </li>
           <li class="form__item">
-            <input class="form__input" type="checkbox" name="vitamins" id="box4">
-            <label class="form__label" for="box4">витамины</label>
+            <div calss="checkbox">
+              <input class="checkbox__input" type="checkbox" name="vitamins" id="box4">
+              <label class="checkbox__label" for="box4">витамины</label>
+            </div>
           </li>
         </ul>
         <button class="form__button button" type="submit">отправить заявку</button>
