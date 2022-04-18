@@ -1,9 +1,13 @@
 .example {
-  background: #eaeaea;
+  background: @grey;
 }
 
 .example__wrapper {
   margin: 25px 20px 40px 20px;
+}
+
+.example__results__item {
+  list-style-type: none;
 }
 
 .example__title {
@@ -14,5 +18,23 @@
 .example__description {
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: @medium-grey;
+}
+
+.example__results__value {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__results__text {
+  font-size: 12px;
+  line-height: 12px;
+  color: @medium-grey;
+}
+
+.example__cost {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
 }
