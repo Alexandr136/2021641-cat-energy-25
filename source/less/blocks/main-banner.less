@@ -4,10 +4,34 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: @brown;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index-background-cat.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: @brown;
+  }
 }
 
 .main-banner__wrapper {
   background: @green-opacity;
+
+  @media (min-width: @tablet-width) {
+    min-height: 800px;
+    background: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 400px;
+    background: @white;
+    position: absolute;
+    top: 160px;
+    left: 75px;
+  }
 }
 
 .main-banner__tagline {
@@ -16,6 +40,10 @@
   line-height: 14px;
   color: @white;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+  }
 }
 
 .main-banner__button {
@@ -28,4 +56,8 @@
 
 .heading-primary--white {
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+  }
 }

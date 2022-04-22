@@ -1,9 +1,53 @@
-.example {
+.example__wrapper {
+  margin: 25px 20px 0 20px;
   background: @grey;
+
+  @media (min-width: @tablet-width) {
+    background: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 -8px 0 -8px;
+    min-height: 598px;
+    background: @grey;
+  }
 }
 
-.example__wrapper {
-  margin: 25px 20px 40px 20px;
+.example__desc {
+  @media (min-width: @tablet-width) {
+    height: 195px;
+    margin: 90px 0 0 0;
+  }
+}
+
+.example__wrapper-desc-results {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.example__description {
+  margin: 0;
+}
+
+.example__results {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    height: 327px;
+    margin: 54px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.example__results-list {
+  margin: 0;
+  display: flex;
 }
 
 .example__results-item {
@@ -12,7 +56,7 @@
 
 .example__title {
   margin: 0;
-  padding: 25px;
+  padding: 25px 0 0 0;
 }
 
 .example__results-value {
@@ -31,4 +75,12 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+}
+
+.example__slider-button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @black;
+  border: none;
 }
