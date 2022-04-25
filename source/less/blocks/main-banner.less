@@ -6,18 +6,13 @@
   background-color: @brown;
 
   @media (min-width: @tablet-width) {
+    min-height: 810px;
     background-image: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: url("../img/index-background-cat.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: @brown;
+    background: @white;
   }
 }
 
-.main-banner__wrapper {
+.main-banner-wrapper {
   background: @green-opacity;
 
   @media (min-width: @tablet-width) {
@@ -28,9 +23,6 @@
   @media (min-width: @desktop-width) {
     min-height: 400px;
     background: @white;
-    position: absolute;
-    top: 160px;
-    left: 75px;
   }
 }
 

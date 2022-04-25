@@ -4,6 +4,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: @brown;
+    display: flex;
   }
 }
 
@@ -28,12 +29,16 @@
   text-transform: uppercase;
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
+.main-nav__toggle {
+  display: none;
+}
 
-  .main-nav__list {
-    display: flex;
-  }
+.main-nav__list {
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
 }
