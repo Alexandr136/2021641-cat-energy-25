@@ -6,23 +6,29 @@
   background-color: @brown;
 
   @media (min-width: @tablet-width) {
-    min-height: 810px;
     background-image: none;
-    background: @white;
-  }
-}
-
-.main-banner-wrapper {
-  background: @green-opacity;
-
-  @media (min-width: @tablet-width) {
-    min-height: 800px;
     background: @white;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 400px;
+    background: none;
+  }
+}
+
+.main-banner__wrapper {
+  background: @green-opacity;
+
+  @media (min-width: @tablet-width) {
     background: @white;
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    padding-top: 96px;
+    padding-bottom: 185px;
+    background: @white;
+    width: 575px;
   }
 }
 
