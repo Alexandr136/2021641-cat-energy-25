@@ -22,28 +22,4 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: @medium-grey;
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      left: 50%;
-      bottom: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-image: url("../img/index-background-desktop.jpg");
-      background-size: 100% 627px;
-      background-repeat: no-repeat;
-    }
-
-    &::after {
-      content: "";
-      left: 0;
-      bottom: 142px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: linear-gradient(to right, @white 50%, rgba(104, 183, 56, 0.85) 50%);
-    }
-  }
 }
