@@ -1,9 +1,65 @@
 .example {
-  background: @grey;
+  padding-top: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    background: linear-gradient(to bottom, @white 25%, @grey 25%);
+  }
 }
 
 .example__wrapper {
-  margin: 25px 20px 40px 20px;
+  background: @grey;
+
+  @media (min-width: @tablet-width) {
+    background: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 641px;
+    background: none;
+  }
+}
+
+.example__desc {
+  @media (min-width: @tablet-width) {
+    min-height: 195px;
+  }
+}
+
+.example__wrapper-desc-results {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.example__description {
+  margin: 0;
+}
+
+.example__results {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 327px;
+    margin: 54px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.example__results-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .example__results-item {
@@ -12,7 +68,12 @@
 
 .example__title {
   margin: 0;
-  padding: 25px;
+  padding: 25px 0 0 0;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 51px;
+    padding-bottom: 146px;
+  }
 }
 
 .example__results-value {
@@ -31,4 +92,12 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+}
+
+.example__slider-button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @black;
+  border: none;
 }

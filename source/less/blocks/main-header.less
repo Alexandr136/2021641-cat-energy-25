@@ -1,0 +1,40 @@
+.main-header {
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 33px;
+
+    &::before {
+      content: "";
+      left: 50%;
+      bottom: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url("../img/index-background-desktop.jpg");
+      background-size: 100% 694px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.main-header__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 98px;
+  }
+}
+
+.main-header__logo-cat {
+  min-height: 38px;
+}
+
+.main-header__logo-cat-energy {
+  min-height: 18px;
+}
