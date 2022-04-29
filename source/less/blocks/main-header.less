@@ -1,7 +1,11 @@
 .main-header {
-  padding-top: 69px;
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
 
   @media (min-width: @desktop-width) {
+    padding-top: 33px;
+
     &::before {
       content: "";
       left: 50%;
@@ -10,7 +14,7 @@
       top: 0;
       right: 0;
       background-image: url("../img/index-background-desktop.jpg");
-      background-size: 100% 627px;
+      background-size: 100% 694px;
       background-repeat: no-repeat;
     }
   }

@@ -23,7 +23,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     column-gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -36,6 +36,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 280px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
