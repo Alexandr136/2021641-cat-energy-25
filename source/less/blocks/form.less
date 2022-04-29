@@ -1,34 +1,117 @@
+.form__wrapper {
+  padding-top: 39px;
+}
+
 .form__fieldset {
   border: none;
   padding: 0;
+  margin: 0;
 }
 
-.form-program__pet {
-  margin: 39px 0 0 20px;
+.form__wrapper-selection {
+  min-height: 325px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 468px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 200px;
+    display: flex;
+  }
 }
 
-.form-program__selection {
-  margin: 52px 0 0 20px;
+.owner {
+  padding-top: 45px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+  }
 }
 
-.form-program__owner {
-  margin: 52px 0 0 20px;
+.owner__wrapper {
+  min-height: 191px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 236px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 162px;
+  }
 }
 
-.form-program__comment {
-  margin: 23px 0 0 20px;
+.comment {
+  padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+  }
 }
 
-.form-program__additionally {
-  margin: 23px 0 0 20px;
+.comment__wrapper {
+  min-height: 214px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 286px;
+  }
+}
+
+.additionally {
+  padding-top: 23px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 67px;
+  }
+}
+
+.additionally__wrapper {
+  min-height: 328px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 311px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 246px;
+  }
+}
+
+.form__title {
+  padding: 0;
 }
 
 .form__list {
   padding: 0;
+  margin: 0;
+}
+
+.form__list-additionally {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 123px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 24px;
+  }
 }
 
 .form__item {
   list-style-type: none;
+  min-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 40px;
+  }
 }
 
 .form__label {
@@ -48,6 +131,16 @@
     color: @medium-grey;
     text-transform: uppercase;
     padding: 0 0 0 15px;
+  }
+}
+
+.form__input-comment {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
