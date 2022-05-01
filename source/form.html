@@ -59,15 +59,15 @@
       <div class="container container--form-tablet">
         <div class="form__wrapper">
           <div class="form__wrapper-selection">
-            <fieldset class="form__fieldset pet">
-              <div class="pet__wrapper">
+            <fieldset class="form__fieldset form__fieldset-pet">
+              <div class="form__pet-wrapper">
                 <legend class="visually-hidden">Данные питомца</legend>
                 <ul class="form__list">
-                  <li class="form__item">
+                  <li class="form__item form__item-data">
                     <label class="form__label" for="name">Имя:*</label>
                     <input class="form__input" type="text" name="username" id="name" placeholder="БАРСИК">
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item-data">
                     <label class="form__label" for="weight">Вес (кг):*</label>
                     <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
                   </li>
@@ -78,18 +78,18 @@
                 </ul>
               </div>
             </fieldset>
-            <fieldset class="form__fieldset selection">
-              <div class="selection__wrapper">
+            <fieldset class="form__fieldset form__fieldset-selection">
+              <div class="form__selection-wrapper form__selection-border">
                 <legend class="visually-hidden">Выбор программы</legend>
                 <ul class="form__list">
-                  <li class="form__item">
+                  <li class="form__item form__item-data">
                     <div class="radio">
                       <input class="radio__input visually-hidden" type="radio" name="program" value="program1"
                         id="weight-loss" checked>
                       <label class="radio__label" for="weight-loss">Похудение</label>
                     </div>
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item-data">
                     <div class="radio">
                       <input class="radio__input visually-hidden" type="radio" name="program" value="program2"
                         id="mass-gain">
@@ -107,11 +107,11 @@
               </div>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset owner">
-            <div class="owner__wrapper">
+          <fieldset class="form__fieldset form__fieldset-owner">
+            <div class="form__owner-wrapper">
               <legend class="form__title heading-secondary">Контактные данные (владельца кота)</legend>
-              <ul class="form__list">
-                <li class="form__item">
+              <ul class="form__list form__list-owner">
+                <li class="form__item form__item-data">
                   <label class="form__label" for="email">E-mail:*</label>
                   <input class="form__input" type="email" name="useremail" id="email" placeholder="kuklachev@gmail.com">
                 </li>
@@ -122,30 +122,30 @@
               </ul>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset comment">
-            <div class="comment__wrapper">
+          <fieldset class="form__fieldset form__fieldset-comment">
+            <div class="form__comment-wrapper">
               <legend class="form__title heading-secondary">Комментарий</legend>
               <textarea class="form__input form__input-comment" name="text"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset additionally checkbox">
-            <div class="additionally__wrapper">
+          <fieldset class="form__fieldset form__fieldset-additionally checkbox">
+            <div class="form__additionally-wrapper">
               <legend class="form__title heading-secondary">Дополнительно</legend>
               <ul class="form__list form__list-additionally">
-                <li class="form__item">
+                <li class="form__item form__item-additionally">
                   <div calss="checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" id="box1" checked>
                     <label class="checkbox__label" for="box1">сахарозаменитель</label>
                   </div>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item-additionally">
                   <div calss="checkbox__wrapper">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="drinking-water" id="box2">
                     <label class="checkbox__label" for="box2">питьевая вода</label>
                   </div>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item-additionally">
                   <div calss="checkbox__wrapper">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="milk" id="box3">
                     <label class="checkbox__label" for="box3">молоко</label>
@@ -158,8 +158,10 @@
                   </div>
                 </li>
               </ul>
-              <button class="form__button button" type="submit">отправить заявку</button>
-              <p class="form__text">* — Обязательные поля</p>
+              <div class="form__button-wrapper">
+                <button class="form__button button" type="submit">отправить заявку</button>
+                <p class="form__text">* — Обязательные поля</p>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -169,8 +171,11 @@
       <div class="container container--form-tablet">
         <div class="contact__wrapper">
           <h2 class="visually-hidden">Контакты.</h2>
-          <p class="contact__cooperation">Приглашаем к сотрудничеству<br> дилеров!</p>
-          <address class="contact__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</address>
+          <p class="contact__cooperation">Приглашаем<br> к сотрудничеству дилеров!</p>
+          <div class="contact__address-wrapper">
+            <address class="contact__address">ул. Большая Конюшенная, д. 19/8</address>
+            <address class="contact__address contact__address-city">Санкт-Петербург</address>
+          </div>
         </div>
       </div>
       <div class="contact__map">
