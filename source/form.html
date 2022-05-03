@@ -60,27 +60,25 @@
         <div class="form__wrapper">
           <div class="form__wrapper-selection">
             <fieldset class="form__fieldset form__fieldset-pet">
-              <div class="form__pet-wrapper">
-                <legend class="visually-hidden">Данные питомца</legend>
-                <ul class="form__list">
-                  <li class="form__item form__item-data">
-                    <label class="form__label" for="name">Имя:*</label>
-                    <input class="form__input" type="text" name="username" id="name" placeholder="БАРСИК">
-                  </li>
-                  <li class="form__item form__item-data">
-                    <label class="form__label" for="weight">Вес (кг):*</label>
-                    <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="age">Возраст (лет):</label>
-                    <input class="form__input" type="text" name="age" id="age" placeholder="7">
-                  </li>
-                </ul>
-              </div>
+              <legend class="visually-hidden">Данные питомца</legend>
+              <ul class="form__list">
+                <li class="form__item form__item-data">
+                  <label class="form__label" for="name">Имя:*</label>
+                  <input class="form__input" type="text" name="username" id="name" placeholder="БАРСИК">
+                </li>
+                <li class="form__item form__item-data">
+                  <label class="form__label" for="weight">Вес (кг):*</label>
+                  <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="age">Возраст (лет):</label>
+                  <input class="form__input" type="text" name="age" id="age" placeholder="7">
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset-selection">
+              <legend class="visually-hidden">Выбор программы</legend>
               <div class="form__selection-wrapper form__selection-border">
-                <legend class="visually-hidden">Выбор программы</legend>
                 <ul class="form__list">
                   <li class="form__item form__item-data">
                     <div class="radio">
@@ -108,30 +106,28 @@
             </fieldset>
           </div>
           <fieldset class="form__fieldset form__fieldset-owner">
-            <div class="form__owner-wrapper">
-              <legend class="form__title heading-secondary">Контактные данные (владельца кота)</legend>
-              <ul class="form__list form__list-owner">
-                <li class="form__item form__item-data">
-                  <label class="form__label" for="email">E-mail:*</label>
-                  <input class="form__input" type="email" name="useremail" id="email" placeholder="kuklachev@gmail.com">
-                </li>
-                <li class="form__item">
-                  <label class="form__label" for="tel">Телефон:*</label>
-                  <input class="form__input" type="tel" name="phone" id="tel" placeholder="8 (960) 900-60-90">
-                </li>
-              </ul>
-            </div>
+            <legend class="form__title heading-secondary form__title-owner">Контактные данные (владельца кота)</legend>
+            <ul class="form__list form__list-owner">
+              <li class="form__item form__item-data">
+                <label class="form__label" for="email">E-mail:*</label>
+                <input class="form__input" type="email" name="useremail" id="email" placeholder="kuklachev@gmail.com">
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="tel">Телефон:*</label>
+                <input class="form__input" type="tel" name="phone" id="tel" placeholder="8 (960) 900-60-90">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset-comment">
+            <legend class="form__title heading-secondary form__title-comment">Комментарий</legend>
             <div class="form__comment-wrapper">
-              <legend class="form__title heading-secondary">Комментарий</legend>
               <textarea class="form__input form__input-comment" name="text"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset-additionally checkbox">
+            <legend class="form__title heading-secondary form__title-additionally">Дополнительно</legend>
             <div class="form__additionally-wrapper">
-              <legend class="form__title heading-secondary">Дополнительно</legend>
               <ul class="form__list form__list-additionally">
                 <li class="form__item form__item-additionally">
                   <div calss="checkbox">
