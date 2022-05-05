@@ -1,9 +1,27 @@
 .main-heading {
-  margin: 27px 0 0 20px;
+  padding-top: 27px;
+  min-height: 109px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+  }
 }
 
 .main-heading__title {
   margin: 0;
+  border-top: 1px solid @special-grey-4;
+  border-bottom: 1px solid @special-grey-4;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+  }
 }
 
 .main-heading__text {
@@ -12,4 +30,12 @@
   text-transform: uppercase;
   margin: 0;
   padding: 37px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 56px;
+  }
 }
