@@ -45,6 +45,7 @@
     flex-direction: column;
     border: none;
     flex: auto;
+    width: calc((100% - 80px * 3) * 3 / 4);
   }
 }
 
@@ -155,6 +156,7 @@
   @media (min-width: @desktop-width) {
     margin: 0 0 0 80px;
     width: calc((100% - 80px * 3) / 4);
+    flex-shrink: 0;
     background-image: url("../img/background-gift.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
