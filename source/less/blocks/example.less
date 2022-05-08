@@ -2,12 +2,13 @@
   padding-top: 49px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
+    padding-top: 47px;
+    background: linear-gradient(to bottom, @white 60%, @grey 25%);
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 26px;
-    background: linear-gradient(to bottom, @white 25%, @grey 25%);
+    background: linear-gradient(to bottom, @white 31%, @grey 31%);
   }
 }
 
@@ -15,12 +16,12 @@
   background: @grey;
 
   @media (min-width: @tablet-width) {
-    background: @white;
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 641px;
     background: none;
+    display: flex;
   }
 }
 
@@ -34,19 +35,39 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
+    padding-bottom: 75px;
   }
 }
 
 .example__description {
   margin: 0;
+  padding-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 63px 10px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    width: 436px;
+  }
 }
 
 .example__results {
+  padding-top: 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    min-height: 327px;
     margin: 54px 0 0 0;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -60,19 +81,47 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .example__results-item {
+  position: relative;
   list-style-type: none;
+  display: flex;
+  border: 1px solid @special-grey;
+  border-radius: 3px;
+  width: 124px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
 }
 
 .example__title {
   margin: 0;
   padding: 25px 0 0 0;
 
+  @media (min-width: @tablet-width) {
+    padding: 43px 0 0 0;
+    border-top: 1px solid @special-grey-5;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-top: 51px;
+    padding-top: 43px;
     padding-bottom: 146px;
+    border: none;
+  }
+}
+
+.example__results-item--weight {
+  margin-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
   }
 }
 
@@ -81,17 +130,72 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  padding: 15px 0 17px 0;
+  margin: auto;
 }
 
 .example__results-text {
+  display: block;
+  text-align: center;
   font-size: 12px;
   line-height: 12px;
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: @grey;
+  width: 77px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background: @white;
+    width: 115px;
+    bottom: -6px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: @grey;
+  }
+}
+
+.example__results-text--time {
+  @media (min-width: @tablet-width) {
+    width: 144px;
+  }
 }
 
 .example__cost {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  color: @black;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 34px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    text-align: right;
+    padding-top: 11px;
+    padding-right: 14px;
+    padding-left: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding: 55px 0 0 0;
+
+    span {
+      padding-left: 63px;
+    }
+  }
 }
 
 .example__slider-button {
@@ -100,4 +204,32 @@
   line-height: 20px;
   color: @black;
   border: none;
+
+  @media (min-width: @desktop-width) {
+    background: @grey;
+  }
+}
+
+.example__slider {
+  padding: 287px 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 616px 71px 55px 58px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 0 194px;
+  }
+}
+
+.example__slider-range {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px 0 35px;
+
+  @media (min-width: @desktop-width) {
+    padding: 535px 0 0 0;
+    width: 592px;
+  }
 }
