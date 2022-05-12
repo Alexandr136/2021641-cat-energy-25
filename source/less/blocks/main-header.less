@@ -11,6 +11,8 @@
 }
 
 .main-header--background {
+  position: relative;
+
   @media (min-width: @desktop-width) {
     &::before {
       content: "";
@@ -20,7 +22,7 @@
       top: 0;
       right: 0;
       background-image: url("../img/index-background-desktop.jpg");
-      background-size: 100% 694px;
+      background-size: 720px 694px;
       background-repeat: no-repeat;
     }
   }
@@ -45,6 +47,8 @@
 }
 
 .main-header__logo-cat {
+  padding-left: 165px;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
