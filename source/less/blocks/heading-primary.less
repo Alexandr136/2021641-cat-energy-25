@@ -6,6 +6,12 @@
   color: @black;
   margin: 0;
 
+  @media (max-width: @mobile-width-only) {
+    &--white-mobile {
+      color: @white;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
