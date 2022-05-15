@@ -1,14 +1,10 @@
 .main-header {
-  @media (min-width: @tablet-width) {
-    padding-top: 24px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 33px;
-  }
+  position: relative;
 }
 
 .main-header--background {
+  position: relative;
+
   @media (min-width: @desktop-width) {
     &::before {
       content: "";
@@ -18,27 +14,67 @@
       top: 0;
       right: 0;
       background-image: url("../img/index-background-desktop.jpg");
-      background-size: 100% 694px;
+      background-size: 720px 694px;
       background-repeat: no-repeat;
+      background-color: @green-2;
     }
   }
 }
 
 .main-header__wrapper {
+  margin: 12px 0 17px 0;
+  display: block;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin: 0;
+  }
+}
+
+.main-header__logo {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+    margin-left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 98px;
+    margin-top: 53px;
+    margin-left: 110px;
+    height: 59px;
   }
 }
 
 .main-header__logo-cat {
-  min-height: 38px;
+  margin-left: -86px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
-.main-header__logo-cat-energy {
-  min-height: 18px;
+.main-header__logo-mobile {
+  width: 191px;
+  height: 38px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    display: none;
+  }
+}
+
+.main-header__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+  }
 }
