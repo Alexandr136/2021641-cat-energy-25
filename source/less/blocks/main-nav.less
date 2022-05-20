@@ -1,12 +1,10 @@
 .main-nav {
   @media (min-width: @tablet-width) {
-    margin-right: 30px;
-    margin-top: 42px;
+    margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-right: 110px;
     margin-top: 69px;
   }
 }
@@ -20,11 +18,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 440px;
-    min-height: 36px;
+    min-height: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
+    width: 483px;
+    min-height: 40px;
   }
 }
 
@@ -36,9 +35,6 @@
     display: block;
     padding-top: 22px;
     padding-bottom: 24px;
-    font-size: 20px;
-    line-height: 20px;
-    color: @black;
     background-color: transparent;
     border-top: 1px solid @special-grey-5;
     text-align: center;
@@ -46,14 +42,13 @@
     @media (min-width: @tablet-width) {
       padding: 0;
       border: none;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 24px;
     }
 
     @media (min-width: @desktop-width) {
       font-size: 20px;
       line-height: 30px;
-      color: @white;
     }
   }
 
@@ -83,9 +78,15 @@
         }
 
         @media (min-width: @desktop-width) {
-          background: @white;
-          bottom: 0;
+          bottom: 1px;
         }
+      }
+    }
+
+    &--active-index::after {
+      @media (min-width: @desktop-width) {
+        background: @white;
+        bottom: 0;
       }
     }
   }
@@ -98,11 +99,25 @@
   line-height: 20px;
   color: @black;
   text-transform: uppercase;
+
+  &:hover {
+    color: rgba(68, 68, 68, 0.6);
+  }
+
+  &--index-color {
+    @media (min-width: @desktop-width) {
+      color: @white;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 14px;
+  top: 12px;
   right: 20px;
   z-index: 5;
   display: block;

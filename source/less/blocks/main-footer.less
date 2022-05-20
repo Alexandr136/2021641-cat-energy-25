@@ -12,17 +12,27 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &--form-tablet {
+    @media (min-width: @tablet-width) {
+      padding: 1px 0 0 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
+  }
 }
 
 .main-footer__wrapper-cat-energy {
   text-align: center;
-  padding: 39px 0 32px 0;
+  padding: 1px 0 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 0 62px 0;
+    padding: 67px 0 62px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 0 63px 0;
+    padding: 61px 0 63px 0;
   }
 }

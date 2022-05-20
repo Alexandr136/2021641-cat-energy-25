@@ -1,12 +1,77 @@
+.checkbox {
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+}
+
 .checkbox__label {
+  position: relative;
+}
+
+.checkbox__input:checked + .checkbox__mark {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    z-index: 3;
+
+    @media (min-width: @tablet-width) {
+      top: -3px;
+      left: 8px;
+      width: 24px;
+      height: 19px;
+      background-size: 24px 19px;
+    }
+  }
+}
+
+.checkbox__input:hover + .checkbox__mark::after {
+  border: 1px solid @special-grey-7;
+}
+
+.checkbox__input:focus + .checkbox__mark::after {
+  outline: 2px solid @medium-grey;
+}
+
+.checkbox__input:disabled + .checkbox__mark {
+  opacity: 0.3;
+}
+
+.checkbox__mark {
   font-family: "Oswald", "Arial", sans-serif;
   color: @black;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-left: 46px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @special-grey;
+    background-color: @white;
+
+    @media (min-width: @tablet-width) {
+      top: -16px;
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 58px;
   }
 }
