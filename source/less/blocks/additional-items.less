@@ -3,7 +3,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 67px;
+    padding-top: 68px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,7 +29,7 @@
   margin-top: 39px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 76px;
+    padding-top: 75px;
     margin: 0;
   }
 
@@ -76,7 +76,7 @@
 .additional-items__item {
   list-style-type: none;
   padding-top: 7px;
-  padding-bottom: 26px;
+  padding-bottom: 25px;
   position: relative;
 
   &::before {
@@ -103,7 +103,6 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    flex-wrap: nowrap;
     padding: 16px 0 16px 0;
   }
 }
@@ -164,6 +163,7 @@
       overflow: hidden;
 
       @media (min-width: @tablet-width) {
+        top: 22px;
         margin-left: calc(50% - 50vw);
       }
 
@@ -184,33 +184,56 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    width: 200px;
     font-size: 20px;
     line-height: 20px;
+    margin: 0 177px 0 0;
+    word-break: break-word;
   }
 
   @media (min-width: @desktop-width) {
     padding: 10px 0 0 0;
+    width: 245px;
+    margin: 0 80px 0 0;
+
   }
 }
 
 .additional-items__wrapper-desc {
-  padding-top: 13px;
   display: flex;
   justify-content: space-between;
+  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
     width: 225px;
-    text-align: right;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 324px;
+  }
+}
+
+.additional-items__wrapper-number {
+  @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin-top: 10px;
+  }
+}
+
+.additional-items__wrapper-price {
+  @media (min-width: @tablet-width) {
+    width: 47px;
     margin-top: 3px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 288px;
+    width: 80px;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: 37px;
-    text-align: left;
   }
 }
 
@@ -224,10 +247,12 @@
     line-height: 20px;
     width: 132px;
     padding-top: 3px;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 4px;
+    text-align: left;
   }
 }
 
@@ -239,11 +264,13 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 4px;
     min-width: 44px;
+    text-align: left;
   }
 }
 
@@ -315,10 +342,10 @@
 }
 
 .additional-items__button-wrapper {
-  margin-top: 14px;
+  margin-top: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 19px;
+    margin-top: 22px;
   }
 
   @media (min-width: @desktop-width) {
