@@ -6,6 +6,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     margin-top: 69px;
+    width: 50%;
   }
 }
 
@@ -16,14 +17,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 440px;
     min-height: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 483px;
     min-height: 40px;
+    justify-content: flex-end;
   }
 }
 
@@ -88,6 +87,14 @@
         background: @white;
         bottom: 0;
       }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 33px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
