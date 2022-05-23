@@ -44,13 +44,17 @@
   padding: 0;
   width: 132px;
 
-  @media (min-width: @tablet-width) {
-    margin: 7px 0 0 26px;
-  }
-
   &--form-tablet {
     @media (min-width: @tablet-width) {
-      margin: 7px 0 0 28px;
+      margin: 7px 0 0 26px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 7px 0 0 26px;
   }
 }
