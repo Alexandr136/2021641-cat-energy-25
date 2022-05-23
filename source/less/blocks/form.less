@@ -238,15 +238,13 @@
 
     @media (min-width: @desktop-width) {
       margin: 0;
-      flex-grow: 1;
       width: calc((100% - 80px) / 2);
     }
   }
 
   &--tel {
     @media (min-width: @desktop-width) {
-      flex-grow: 1;
-      margin-left: 66px;
+      margin-left: 80px;
       width: calc((100% - 80px) / 2);
     }
   }
@@ -278,6 +276,15 @@
 .form__wrapper-input-email {
   width: 100%;
   position: relative;
+  margin-left: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 21px;
+  }
 }
 
 .form__svg-email {
@@ -289,11 +296,22 @@
     top: 18px;
     right: 17px;
   }
+
+  @media (min-width: @desktop-width) {
+    right: 19px;
+  }
 }
+
+
 
 .form__wrapper-input-tel {
   width: 100%;
   position: relative;
+  margin-left: 9px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 14px;
+  }
 }
 
 .form__svg-tel {
@@ -327,14 +345,18 @@
 
   @media (min-width: @desktop-width) {
     padding: 9px 18px;
+    margin-left: 16px;
   }
 
   &--weight {
     margin-left: 16px;
-    width: calc;
 
     @media (min-width: @tablet-width) {
       margin-left: 21px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 19px;
     }
   }
 
@@ -344,38 +366,37 @@
     @media (min-width: @tablet-width) {
       margin-left: 19px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 16px;
+    }
   }
 
   &--email {
     border: 1px solid @special-grey;
-    margin-left: 11px;
-    width: 96%;
+    margin: 0;
+    width: 100%;
 
     @media (min-width: @tablet-width) {
-      margin-left: 20px;
       padding: 10px 0 10px 20px;
-      width: 97%;
     }
 
     @media (min-width: @desktop-width) {
       padding: 10px 0 10px 19px;
-      margin-left: 20px;
     }
   }
 
   &--tel {
     border: 1px solid @special-grey;
-    margin-left: 9px;
-    width: 96%;
+    margin: 0;
+    width: 100%;
 
     @media (min-width: @tablet-width) {
-      margin-left: 14px;
       padding: 10px 0 10px 20px;
-      width: 97%;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 15px;
+      padding: 10px 0 10px 17px;
     }
   }
 
@@ -387,6 +408,7 @@
 
     @media (min-width: @tablet-width) {
       margin: 76px 0 0 0;
+      padding: 0 18px 0 18px;
       width: 100%;
       min-height: 174px;
     }
