@@ -10,20 +10,16 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="container">
+    <div class="container container--nav">
       <div class="main-header__wrapper">
         <div class="main-header__logo">
-          <a class="main-header__logo-cat logo" href="#">
-            <img class="logo__cat" src="img/logo-cat.svg" width="34" height="38" alt="Кот.">
-          </a>
-          <a class="main-header__logo-cat-energy logo" href="#">
-            <img class="logo__cat-energy" src="img/logo-cat-energy.svg" width="101" height="18" alt="Кошачья энергия.">
-          </a>
-          <a class="main-header__logo-tablet" href="index.html">
-            <img class="logo__tablet-img" src="img/logo-header-tablet.svg" width="174" height="52" alt="Логотип">
+          <a class="main-header__logo-cat logo" href="index.html">
+            <img class="main-header__logo-mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип кот">
+            <img class="main-header__logo-tablet" src="img/logo-header-tablet.svg" width="174" height="52"
+              alt="Логотип кот">
           </a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
@@ -49,12 +45,12 @@
     </div>
   </header>
 
-  <main class="main-form-container">
+  <main class="main-form-container main-style">
     <div class="main-heading">
       <div class="container container--form-tablet">
-        <h1 class="main-heading__title heading-primary">Подбор программы</h1>
+        <h1 class="main-heading__title heading-primary main-heading__title--form-tablet">Подбор программы</h1>
         <p class="main-heading__text">
-          Заполните анкету, и мы подберем<br> программу питания для вашего кота
+          Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
       </div>
     </div>
@@ -62,98 +58,142 @@
       <div class="container container--form-tablet">
         <div class="form__wrapper">
           <div class="form__wrapper-selection">
-            <fieldset class="form__fieldset form__fieldset-pet">
+            <fieldset class="form__fieldset form__fieldset--pet">
               <legend class="visually-hidden">Данные питомца</legend>
               <ul class="form__list">
-                <li class="form__item form__item-data">
+                <li class="form__item form__item--desc">
                   <label class="form__label" for="name">Имя:*</label>
                   <input class="form__input" type="text" name="username" id="name" placeholder="БАРСИК">
                 </li>
-                <li class="form__item form__item-data">
+                <li class="form__item form__item--desc">
                   <label class="form__label" for="weight">Вес (кг):*</label>
-                  <input class="form__input" type="text" name="weight" id="weight" placeholder="7">
+                  <input class="form__input form__input--weight" type="text" name="weight" id="weight" placeholder="7">
                 </li>
                 <li class="form__item">
                   <label class="form__label" for="age">Возраст (лет):</label>
-                  <input class="form__input" type="text" name="age" id="age" placeholder="7">
+                  <input class="form__input form__input--age" type="text" name="age" id="age" placeholder="7">
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset form__fieldset-selection">
+            <fieldset class="form__fieldset form__fieldset--selection">
               <legend class="visually-hidden">Выбор программы</legend>
-              <div class="form__selection-wrapper form__selection-border">
+              <div class="form__selection-wrapper">
                 <ul class="form__list">
-                  <li class="form__item form__item-data">
+                  <li class="form__item form__item--data">
                     <div class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="program" value="program1"
-                        id="weight-loss" checked>
-                      <label class="radio__label" for="weight-loss">Похудение</label>
+                      <label class="radio__label">
+                        <input class="radio__input visually-hidden" type="radio" name="program" value="program1"
+                          checked>
+                        <span class="radio__mark">Похудение</span>
+                      </label>
                     </div>
                   </li>
-                  <li class="form__item form__item-data">
+                  <li class="form__item form__item--data">
                     <div class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="program" value="program2"
-                        id="mass-gain">
-                      <label class="radio__label" for="mass-gain">Набор массы</label>
+                      <label class="radio__label">
+                        <input class="radio__input visually-hidden" type="radio" name="program" value="program2">
+                        <span class="radio__mark">Набор массы</span>
+                      </label>
                     </div>
                   </li>
                   <li class="form__item">
                     <div class="radio">
-                      <input class="radio__input visually-hidden" type="radio" name="program" value="program3"
-                        id="need-advice">
-                      <label class="radio__label" for="need-advice">Не знаю (Нужен ваш совет)</label>
+                      <label class="radio__label">
+                        <input class="radio__input visually-hidden" type="radio" name="program" value="program3">
+                        <span class="radio__mark">Не знаю (Нужен ваш совет)</span>
+                      </label>
                     </div>
                   </li>
                 </ul>
               </div>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset form__fieldset-owner">
-            <legend class="form__title heading-secondary form__title-owner">Контактные данные (владельца кота)</legend>
-            <ul class="form__list form__list-owner">
-              <li class="form__item form__item-data">
+          <fieldset class="form__fieldset form__fieldset--owner">
+            <legend class="form__title heading-secondary form__title--owner">Контактные данные<br> (владельца кота)
+            </legend>
+            <ul class="form__list form__list--owner">
+              <li class="form__item form__item--email">
                 <label class="form__label" for="email">E-mail:*</label>
-                <input class="form__input" type="email" name="useremail" id="email" placeholder="kuklachev@gmail.com">
+                <div class="form__wrapper-input-email">
+                  <input class="form__input form__input--email" type="email" name="useremail" id="email"
+                    placeholder="kuklachev@gmail.com">
+                  <svg class="form__svg-email" width="20" height="15" viewBox="0 0 20 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
+                    <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3" />
+                    <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3" />
+                    <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3" />
+                    <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z"
+                      stroke="#222222" stroke-width="1.3" />
+                  </svg>
+                </div>
               </li>
-              <li class="form__item">
+              <li class="form__item form__item--tel">
                 <label class="form__label" for="tel">Телефон:*</label>
-                <input class="form__input" type="tel" name="phone" id="tel" placeholder="8 (960) 900-60-90">
+                <div class="form__wrapper-input-tel">
+                  <input class="form__input form__input--tel" type="tel" name="phone" id="tel"
+                    placeholder="8 (960) 900-60-90">
+                  <svg class="form__svg-tel" width="20" height="21" viewBox="0 0 20 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_153_253)">
+                      <path
+                        d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z"
+                        fill="black" />
+                      <path
+                        d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z"
+                        fill="black" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_153_253">
+                        <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset-comment">
-            <legend class="form__title heading-secondary form__title-comment">Комментарий</legend>
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <legend class="form__title heading-secondary form__title--comment">Комментарий</legend>
             <div class="form__comment-wrapper">
-              <textarea class="form__input form__input-comment" name="text"
+              <textarea class="form__input form__input--comment" name="text"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset-additionally checkbox">
-            <legend class="form__title heading-secondary form__title-additionally">Дополнительно</legend>
+          <fieldset class="form__fieldset form__fieldset--additionally checkbox">
+            <legend class="form__title heading-secondary form__title--additionally">Дополнительно</legend>
             <div class="form__additionally-wrapper">
-              <ul class="form__list form__list-additionally">
-                <li class="form__item form__item-additionally">
-                  <div calss="checkbox">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" id="box1" checked>
-                    <label class="checkbox__label" for="box1">сахарозаменитель</label>
+              <ul class="form__list form__list--additionally">
+                <li class="form__item form__item--additionally">
+                  <div class="checkbox">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" checked>
+                      <span class="checkbox__mark">сахарозаменитель</span>
+                    </label>
                   </div>
                 </li>
-                <li class="form__item form__item-additionally">
-                  <div calss="checkbox__wrapper">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="drinking-water" id="box2">
-                    <label class="checkbox__label" for="box2">питьевая вода</label>
+                <li class="form__item form__item--additionally">
+                  <div class="checkbox__wrapper">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="drinking-water">
+                      <span class="checkbox__mark">питьевая вода</span>
+                    </label>
                   </div>
                 </li>
-                <li class="form__item form__item-additionally">
-                  <div calss="checkbox__wrapper">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="milk" id="box3">
-                    <label class="checkbox__label" for="box3">молоко</label>
+                <li class="form__item form__item--additionally">
+                  <div class="checkbox__wrapper">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="milk">
+                      <span class="checkbox__mark">молоко</span>
+                    </label>
                   </div>
                 </li>
                 <li class="form__item">
-                  <div calss="checkbox__wrapper">
-                    <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins" id="box4">
-                    <label class="checkbox__label" for="box4">витамины</label>
+                  <div class="checkbox__wrapper">
+                    <label class="checkbox__label">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins">
+                      <span class="checkbox__mark">витамины</span>
+                    </label>
                   </div>
                 </li>
               </ul>
@@ -168,7 +208,7 @@
     </form>
     <section class="contact contact--background">
       <div class="container container--form-tablet">
-        <div class="contact__wrapper">
+        <div class="contact__wrapper contact__wrapper--form-tablet">
           <h2 class="visually-hidden">Контакты.</h2>
           <p class="contact__cooperation">Приглашаем<br> к сотрудничеству дилеров!</p>
           <div class="contact__address-wrapper">
@@ -187,32 +227,66 @@
   </main>
   <footer class="main-footer">
     <div class="container">
-      <div class="main-footer__wrapper">
-        <div class="main-footer__cat-energy">
+      <div class="main-footer__wrapper main-footer__wrapper--form-tablet">
+        <div class="main-footer__wrapper-cat-energy">
           <a class="main-footer__logo-cat-energy logo" href="#">
-            <img class="logo-cat-energy" src="img/logo-cat-energy.svg" width="101" height="18" alt="Кошачья энергия.">
+            <h3 class="visually-hidden">Энергия кошек</h3>
+            <img class="main-footer__cat-energy" src="img/footer-cat-energy.svg" width="128" height="24"
+              alt="Кошачья энергия">
           </a>
         </div>
         <div class="main-footer__social social">
-          <ul class="social__list">
+          <ul class="social__list social__list--form-tablet">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <h3 class="visually-hidden">Вконтакте</h3>
+                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 5.339c0-.855.515-1.316 1.545-1.383l3.97.025a.52.52 0 0 1 .533.377c.409 1.257.866 2.343 1.372 3.257.506.913 1.168 1.965 1.985 3.156.071.15.187.226.346.226.125 0 .223-.059.293-.176l.08-.277.027-4.35c0-.302-.075-.503-.226-.604-.151-.1-.431-.176-.84-.226-.32-.05-.48-.235-.48-.553 0-.067.01-.118.027-.151.373-1.09 1.44-1.635 3.198-1.635L14.322 3c.675 0 1.234.16 1.678.478.444.318.666.821.666 1.509v5.708c.125.084.24.126.347.126.266 0 .497-.15.692-.453 1.954-2.582 3.011-4.308 3.17-5.18 0-.017.019-.059.054-.126.125-.251.329-.47.613-.654.284-.184.533-.31.746-.377a.554.554 0 0 1 .24-.05h4.13l.266.025c.355 0 .63.16.826.478.07.1.12.21.146.327.027.117.045.234.054.352.009.117.013.184.013.2v.177c-.124.687-.44 1.42-.946 2.2-.506.78-1.15 1.622-1.931 2.528-.782.905-1.27 1.5-1.466 1.785-.16.201-.24.386-.24.553 0 .135.071.286.213.453l3.89 4.627c.213.269.32.562.32.88 0 .386-.16.705-.48.956-.32.252-.701.394-1.145.428l-.453.025h-4.05a.855.855 0 0 0-.106.012.862.862 0 0 1-.107.013c-.39 0-.755-.16-1.092-.478-.125-.134-.96-1.123-2.505-2.967a1.387 1.387 0 0 0-.373-.327c-.07.268-.164.654-.28 1.157-.115.503-.2.863-.253 1.081l-.08.427c-.177.587-.55.94-1.119 1.057l-.373.025h-2.61c-1.475 0-2.945-.637-4.41-1.911-1.466-1.275-2.784-2.922-3.957-4.942-1.172-2.02-2.264-4.372-3.277-7.054A1.916 1.916 0 0 1 1 5.338Zm16.013 6.513c-.373 0-.71-.096-1.013-.29-.302-.192-.453-.456-.453-.791V4.987c0-.336-.089-.575-.266-.717-.178-.143-.489-.214-.933-.214l-1.518.05c-.764 0-1.341.126-1.732.378.781.352 1.172.922 1.172 1.71v4.426a1.5 1.5 0 0 1-.533 1.044 1.59 1.59 0 0 1-1.066.414c-.532 0-.94-.243-1.225-.729C8.06 9.371 7.03 7.493 6.356 5.716l-.24-.654-3.544-.025c-.231 0-.36.013-.386.038-.027.025-.04.096-.04.213 0 .151.017.31.053.478l.56 1.409c1.491 3.638 3.112 6.505 4.862 8.6 1.75 2.096 3.468 3.144 5.155 3.144h2.665c.106 0 .186-.03.24-.088.053-.06.097-.172.133-.34l.053-.251.506-2.213c.142-.302.267-.503.373-.604a.975.975 0 0 1 .693-.277c.426 0 .861.243 1.305.73l2.265 2.716c.142.218.293.327.453.327h4.396c.533 0 .8-.126.8-.378a.466.466 0 0 0-.08-.251l-3.864-4.552c-.302-.352-.453-.73-.453-1.131 0-.403.142-.788.427-1.157.23-.336.679-.893 1.345-1.673a37.63 37.63 0 0 0 1.745-2.187c.498-.68.826-1.296.986-1.849l.08-.327a.371.371 0 0 1-.027-.163.574.574 0 0 0-.026-.189h-4.183c-.267.1-.48.252-.64.453l-.16.478c-.444 1.156-1.607 2.942-3.49 5.356a1.892 1.892 0 0 1-1.305.503Z"
+                    fill="#666" />
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в
-                Ютубе</a>
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <h3 class="visually-hidden">Ютубе</h3>
+                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m17.85 10.793-5.236-3.491a.655.655 0 0 0-1.014.545v6.982a.654.654 0 0 0 1.014.546l5.237-3.491a.654.654 0 0 0 0-1.091Zm-4.94 2.814V9.07l3.403 2.27-3.404 2.268Zm12.48-8.563a2.4 2.4 0 0 0-1.452-1.637C20.218 1.978 14.251 2 14 2c-.25 0-6.218-.022-9.938 1.407A2.4 2.4 0 0 0 2.61 5.044C2.327 6.113 2 8.076 2 11.338c0 3.262.327 5.226.61 6.295a2.4 2.4 0 0 0 1.452 1.636c3.72 1.43 9.687 1.407 9.938 1.407h.076c.753 0 6.317-.043 9.862-1.407a2.4 2.4 0 0 0 1.451-1.636c.284-1.07.611-3.033.611-6.295s-.327-5.225-.61-6.294Zm-1.266 12.261a1.09 1.09 0 0 1-.655.742c-3.49 1.342-9.404 1.32-9.469 1.32-.066 0-5.978.022-9.47-1.32a1.09 1.09 0 0 1-.654-.742c-.261-1.003-.567-2.847-.567-5.967 0-3.12.306-4.963.567-5.967a1.09 1.09 0 0 1 .655-.742C8.02 3.287 13.935 3.31 14 3.31c.066 0 5.978-.022 9.47 1.32a1.092 1.092 0 0 1 .654.742c.262 1.004.567 2.847.567 5.967 0 3.12-.305 4.964-.567 5.967Z"
+                    fill="#666" />
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                <h3 class="visually-hidden">Телеграме</h3>
+                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M23.4608 3.15291C23.6393 3.30222 23.7255 3.5349 23.6872 3.76448L21.0611 19.5214C21.0244 19.7411 20.8789 19.9273 20.6745 20.0159C20.47 20.1045 20.2346 20.0833 20.0493 19.9597L12.1708 14.7074C12.0177 14.6054 11.9145 14.4437 11.8862 14.2619C11.858 14.08 11.9074 13.8947 12.0223 13.751L14.633 10.4877L10.273 13.3944C10.077 13.525 9.82597 13.5407 9.61524 13.4353L4.36293 10.8092C4.12769 10.6915 3.98535 10.4449 4.0012 10.1824C4.01705 9.91983 4.18804 9.6921 4.43573 9.60364L22.8188 3.03826C23.038 2.95998 23.2822 3.00359 23.4608 3.15291ZM6.32626 10.3228L9.86168 12.0905L17.4231 7.0495C17.6925 6.86994 18.0525 6.91349 18.2712 7.1521C18.49 7.3907 18.5022 7.75314 18.3 8.00591L13.495 14.0121L19.9328 18.3039L22.2083 4.65058L6.32626 10.3228Z"
+                    fill="#666666" />
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
         <div class="main-footer__academy academy">
-          <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="academy__link-html" href="https://htmlacademy.ru/intensive/adaptive">
+            <h3 class="academy__title">HTML Academy</h3>
+          </a>
+          <a class="academy__link-logo academy__link-logo--form-tablet"
+            href="https://htmlacademy.ru/intensive/adaptive">
+            <h3 class="visually-hidden">HTML Academy</h3>
+            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z"
+                fill="#666" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
+  <script src="script/script.js"></script>
 </body>
 
 </html>

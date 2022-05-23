@@ -1,26 +1,38 @@
 .main-heading {
-  padding-top: 27px;
-  min-height: 109px;
+  position: relative;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 65px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    overflow: hidden;
+    background-color: @special-grey-3;
   }
 
-  @media (min-width: @desktop-width) {
-    padding-top: 74px;
+  @media (min-width: @tablet-width) {
+    &::before {
+      display: none;
+    }
   }
 }
 
 .main-heading__title {
   margin: 0;
-  border-top: 1px solid @special-grey-4;
-  border-bottom: 1px solid @special-grey-4;
-  padding-top: 27px;
-  padding-bottom: 41px;
+  padding-top: 22px;
 
   @media (min-width: @tablet-width) {
-    border: none;
-    padding: 0;
+    padding: 47px 0 0 0;
+
+    &--form-tablet {
+      padding: 47px 0 0 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
   }
 }
 
@@ -29,13 +41,15 @@
   color: @black;
   text-transform: uppercase;
   margin: 0;
-  padding: 37px 0 0 0;
+  padding: 37px 15px 0 0;
 
   @media (min-width: @tablet-width) {
-    padding-top: 54px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 54px 279px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 56px;
+    padding: 56px 830px 0 0;
   }
 }

@@ -1,12 +1,87 @@
 .radio__label {
+  position: relative;
+}
+
+.radio__mark {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey;
   text-transform: uppercase;
+  padding-left: 45px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 88px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 86px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -9px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @special-grey;
+    border-radius: 50%;
+    background-color: @white;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      top: -14px;
+      left: 28px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -15px;
+      left: 26px;
+    }
+  }
+}
+
+.radio__input:checked + .radio__mark {
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 8px;
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: @green;
+
+    @media (min-width: @tablet-width) {
+      top: -4px;
+      left: 39px;
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 37px;
+    }
+  }
+}
+
+.radio__input:hover + .radio__mark::before {
+  border: 1px solid @special-grey-7;
+}
+
+.radio__input:disabled + .radio__mark {
+  opacity: 0.3;
+}
+
+.radio__input:focus + .radio__mark::before {
+  outline: 2px solid @medium-grey;
 }

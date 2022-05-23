@@ -10,18 +10,22 @@
   padding: 26px 0 26px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 0 56px 0;
+    padding: 59px 40px 56px 39px;
+
+    &--form-tablet {
+      padding: 59px 0 56px 3px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: 30px;
     z-index: 2;
     width: 565px;
     min-height: 198px;
     background: @white;
-    padding: 56px 80px 56px 80px;
+    padding: 59px 80px 56px 80px;
   }
 }
 
@@ -50,7 +54,7 @@
 }
 
 .contact__address-wrapper {
-  width: 94%;
+  width: 99%;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -97,4 +101,8 @@
 .contact__map iframe {
   border: none;
   display: block;
+
+  @media (max-width: @mobile-width-only) {
+    height: 362px;
+  }
 }
