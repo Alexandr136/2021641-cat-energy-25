@@ -74,7 +74,7 @@
         background: @green;
 
         @media (min-width: @tablet-width) {
-          bottom: 0;
+          bottom: -1px;
         }
 
         @media (min-width: @desktop-width) {
@@ -86,13 +86,13 @@
     &--active-index::after {
       @media (min-width: @desktop-width) {
         background: @white;
-        bottom: 0;
+        bottom: 3px;
       }
     }
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 38px;
+    margin-left: 37px;
 
     &:first-child {
       margin-left: 0;
