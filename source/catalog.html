@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
 </head>
 
 <body class="page__body">
@@ -14,9 +17,11 @@
       <div class="main-header__wrapper">
         <div class="main-header__logo">
           <a class="main-header__logo-cat logo" href="index.html">
-            <img class="main-header__logo-mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип кот">
-            <img class="main-header__logo-tablet" src="img/logo-header-tablet.svg" width="174" height="52"
-              alt="Логотип кот">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-header__logo-mobile" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип кот">
+            </picture>
           </a>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -62,9 +67,12 @@
                   <div class="product__illustration product__illustration--small">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-1-desktop.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-1-desktop.png">
-                        <img class="product__img-small" src="img/catalog/catalog-1.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-1-desktop.png 1x, img/catalog/catalog-1-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-1-tablet.png 1x, img/catalog/catalog-1-tablet@2x.png 2x">
+                        <img class="product__img-small" src="img/catalog/catalog-1.png"
+                          srcset="img/catalog/catalog-1@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -99,9 +107,12 @@
                   <div class="product__illustration product__illustration--big">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-2-tablet.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-2-desktop.png">
-                        <img class="product__img-big" src="img/catalog/catalog-2.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-2-desktop.png 1x, img/catalog/catalog-2-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-2-tablet.png 1x, img/catalog/catalog-2-tablet@2x.png 2x">
+                        <img class="product__img-big" src="img/catalog/catalog-2.png"
+                          srcset="img/catalog/catalog-2@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -136,9 +147,12 @@
                   <div class="product__illustration product__illustration--small">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-3-desktop.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-3-desktop.png">
-                        <img class="product__img-small" src="img/catalog/catalog-3.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-3-desktop.png 1x, img/catalog/catalog-3-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-3-tablet.png 1x, img/catalog/catalog-3-tablet@2x.png 2x">
+                        <img class="product__img-small" src="img/catalog/catalog-3.png"
+                          srcset="img/catalog/catalog-3@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -173,9 +187,12 @@
                   <div class="product__illustration">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-4-tablet.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-4-desktop.png">
-                        <img class="product__img-big" src="img/catalog/catalog-4.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-4-desktop.png 1x, img/catalog/catalog-4-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-4-tablet.png 1x, img/catalog/catalog-4-tablet@2x.png 2x">
+                        <img class="product__img-big" src="img/catalog/catalog-4.png"
+                          srcset="img/catalog/catalog-4@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -210,9 +227,12 @@
                   <div class="product__illustration product__illustration--small">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-5-tablet.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-5-desktop.png">
-                        <img class="product__img-small" src="img/catalog/catalog-5.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-5-desktop.png 1x, img/catalog/catalog-5-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-5-tablet.png 1x, img/catalog/catalog-5-tablet@2x.png 2x">
+                        <img class="product__img-small" src="img/catalog/catalog-5.png"
+                          srcset="img/catalog/catalog-5@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -247,9 +267,12 @@
                   <div class="product__illustration">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-6-tablet.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-6-desktop.png">
-                        <img class="product__img-big" src="img/catalog/catalog-6.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-6-desktop.png 1x, img/catalog/catalog-6-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-6-tablet.png 1x, img/catalog/catalog-6-tablet@2x.png 2x">
+                        <img class="product__img-big" src="img/catalog/catalog-6.png"
+                          srcset="img/catalog/catalog-6@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>
@@ -284,9 +307,12 @@
                   <div class="product__illustration product__illustration--small">
                     <a class="product-catalog__link" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/catalog-7-tablet.png">
-                        <source media="(min-width: 1220px)" srcset="img/catalog/catalog-7-desktop.png">
-                        <img class="product__img-small" src="img/catalog/catalog-7.png" alt="Кэт Энерджи">
+                        <source media="(min-width: 1280px)"
+                          srcset="img/catalog/catalog-7-desktop.png 1x, img/catalog/catalog-7-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)"
+                          srcset="img/catalog/catalog-7-tablet.png 1x, img/catalog/catalog-7-tablet@2x.png 2x">
+                        <img class="product__img-small" src="img/catalog/catalog-7.png"
+                          srcset="img/catalog/catalog-7@2x.png 2x" alt="Кэт Энерджи">
                       </picture>
                     </a>
                   </div>

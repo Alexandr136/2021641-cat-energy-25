@@ -1,11 +1,11 @@
 .example {
-  margin-top: 49px;
+  margin-top: 35px;
   background: @grey;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding-top: 47px;
-    background: linear-gradient(to bottom, @white 650px, @grey 25%);
+    background: linear-gradient(to bottom, @white 666px, @grey 25%);
     position: relative;
 
     &::before {
@@ -42,12 +42,16 @@
 }
 
 .example__desc {
-  padding-top: 40px;
+  padding-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 1px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 146px;
     padding-right: 166px;
-    padding-bottom: 75px;
+    padding-bottom: 95px;
   }
 }
 
@@ -80,7 +84,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin: 54px 0 0 0;
+    margin: 53px 0 0 0;
     padding: 0;
   }
 
@@ -118,7 +122,7 @@
 
 .example__title {
   margin: 0;
-  padding: 25px 0 0 0;
+  padding: 28px 0 0 0;
 
   @media (min-width: @tablet-width) {
     padding: 43px 0 0 0;
@@ -143,13 +147,14 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  padding: 15px 0 17px 0;
+  text-transform: uppercase;
+  padding: 13px 0 17px 0;
   margin: auto;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding: 15px 0 20px 0;
+    padding: 15px 0 19px 0;
   }
 }
 
@@ -159,7 +164,7 @@
   font-size: 12px;
   line-height: 12px;
   position: absolute;
-  bottom: -13px;
+  bottom: -15px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -203,16 +208,22 @@
     font-size: 20px;
     text-align: right;
     padding-top: 11px;
-    padding-right: 14px;
-    padding-left: 140px;
+    padding-right: 3px;
+    padding-left: 147px;
+
+    span {
+      display: block;
+      padding: 9px 0 0 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    padding: 55px 0 0 0;
+    padding: 59px 0 0 0;
 
     span {
-      padding-left: 63px;
+      display: inline-block;
+      padding: 0 0 0 62px;
     }
   }
 }
@@ -224,15 +235,25 @@
   color: @black;
   border: none;
   background: @grey;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 47px;
+      border-bottom: 1px dotted @special-grey-7;
+    }
   }
 }
 
 .example__slider {
-  padding: 287px 0 40px 0;
+  padding: 291px 0 44px 0;
   position: relative;
 
   @media (max-width: @mobile-width-only) {
@@ -245,6 +266,11 @@
       top: 40px;
       background-image: url("../img/cat-mobile.png");
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/cat-mobile@2x.png");
+        background-size: 100%;
+      }
     }
   }
 
@@ -256,32 +282,48 @@
     &::before {
       content: "";
       position: absolute;
-      width: 296px;
+      width: 43%;
       height: 511px;
-      left: 59px;
-      top: 80px;
-      background-image: url("../img/cat-1.png");
+      left: 51px;
+      top: 81px;
+      background-image: url("../img/cat-fat.png");
       background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 20;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/cat-fat@2x.png");
+
+      }
 
       @media (min-width: @desktop-width) {
         top: 0;
-        left: 18px;
+        left: 12px;
+        width: 50%;
       }
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 296px;
+      width: 50%;
       height: 511px;
-      right: 57px;
-      top: 80px;
-      background-image: url("../img/cat-2.png");
+      right: 0;
+      left: auto;
+      top: 84px;
+      background-image: url("../img/cat-skinny.png");
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position-x: -240px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/cat-skinny@2x.png");
+      }
 
       @media (min-width: @desktop-width) {
         top: 0;
         right: 0;
+        background-position-x: -229px;
       }
     }
   }
@@ -298,11 +340,69 @@
   padding: 0 35px 0 35px;
 
   @media (min-width: @tablet-width) {
-    padding: 616px 57px 55px 59px;
+    padding: 624px 60px 59px 64px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 536px 0 0 16px;
-    width: 592px;
+    padding: 539px 0 0 27px;
+    width: 609px;
+  }
+}
+
+.example__slider__range {
+  display: none;
+}
+
+.example__slider__bar {
+  display: block;
+  width: 86px;
+  height: 14px;
+  border: 1px solid @special-grey;
+  border-radius: 6px;
+  background: @white;
+  margin: 4px 0 0 2px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 426px;
+    height: 6px;
+    background: @special-grey-9;
+    border: none;
+    margin: 13px 0 0 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 14px 0 0 2px;
+  }
+}
+
+.example__slider__toggle {
+  display: block;
+  width: 43%;
+  height: 6px;
+  border-radius: 6px;
+  background: @green;
+  margin: 3px 5px 0 5px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -17px;
+    left: 191px;
+    width: 34px;
+    height: 34px;
+    background: @white;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: @green;
+    }
   }
 }
