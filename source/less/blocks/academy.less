@@ -1,6 +1,9 @@
 .academy {
-  display: flex;
-  justify-content: space-between;
+  padding: 38px 0 22px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .academy__title {
@@ -10,28 +13,18 @@
   font-size: 16px;
   line-height: 18px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 22px;
+  }
 }
 
 .academy__link-html {
-  padding: 47px 0 32px 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 63px 25px 55px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 67px 23px 58px 0;
-  }
-}
-
-.academy__link-logo {
-  padding: 39px 0 0 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 56px 0 55px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 59px 0 58px 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
