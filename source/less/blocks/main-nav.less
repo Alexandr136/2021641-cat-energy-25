@@ -124,12 +124,20 @@
     color: rgba(68, 68, 68, 0.6);
   }
 
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   &--index-color {
     @media (min-width: @desktop-width) {
       color: @white;
 
       &:hover {
         color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
       }
     }
   }

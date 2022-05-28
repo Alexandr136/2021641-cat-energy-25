@@ -291,6 +291,8 @@
   position: absolute;
   top: 16px;
   right: 15px;
+  fill: @white;
+  stroke: @dark-grey;
 
   @media (min-width: @tablet-width) {
     top: 18px;
@@ -321,6 +323,7 @@
   position: absolute;
   top: 13px;
   right: 13px;
+  fill: @black;
 
   @media (min-width: @tablet-width) {
     top: 16px;
@@ -338,6 +341,7 @@
   line-height: 18px;
   color: @medium-grey;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding: 10px 0 10px 18px;
@@ -387,6 +391,10 @@
     @media (min-width: @desktop-width) {
       padding: 10px 0 10px 19px;
     }
+
+    &:focus + svg {
+      stroke: @green;
+    }
   }
 
   &--tel {
@@ -400,6 +408,10 @@
 
     @media (min-width: @desktop-width) {
       padding: 10px 0 10px 17px;
+    }
+
+    &:focus + svg {
+      fill: @green;
     }
   }
 
@@ -493,5 +505,13 @@
 
   @media (min-width: @desktop-width) {
     padding: 11px 207px;
+  }
+
+  &:hover {
+    background-color: @green-3;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

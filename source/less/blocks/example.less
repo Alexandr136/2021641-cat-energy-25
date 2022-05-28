@@ -236,6 +236,7 @@
   border: none;
   background: @grey;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -248,6 +249,21 @@
       bottom: 0;
       width: 47px;
       border-bottom: 1px dotted @special-grey-7;
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 47px;
+        border-bottom: 1px solid @black;
+        opacity: 0.4;
+      }
+    }
+
+    &:active::before {
+      display: none;
     }
   }
 }
@@ -383,26 +399,36 @@
   border-radius: 6px;
   background: @green;
   margin: 3px 5px 0 5px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     top: -17px;
-    left: 191px;
+    left: 189px;
     width: 34px;
     height: 34px;
     background: @white;
     border-radius: 50%;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    border: 1px solid @special-grey;
 
     &::before {
       content: "";
       position: absolute;
-      top: 13px;
-      left: 13px;
+      top: 12px;
+      left: 12px;
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: @green;
+    }
+
+    &:hover {
+      border: 1px solid @special-grey-7;
+    }
+
+    &:active {
+      border: 1px solid @green;
     }
   }
 }

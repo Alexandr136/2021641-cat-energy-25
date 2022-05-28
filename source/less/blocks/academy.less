@@ -27,4 +27,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    fill: @special-grey-2;
+  }
+
+  &:hover svg {
+    fill: @green;
+  }
+
+  &:active svg {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  &:active .academy__title {
+    opacity: 0.3;
+  }
 }
