@@ -33,7 +33,7 @@
   a {
     position: relative;
     display: block;
-    padding-top: 22px;
+    padding-top: 21px;
     padding-bottom: 24px;
     background-color: transparent;
     border-top: 1px solid @special-grey-5;
@@ -124,12 +124,20 @@
     color: rgba(68, 68, 68, 0.6);
   }
 
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   &--index-color {
     @media (min-width: @desktop-width) {
       color: @white;
 
       &:hover {
         color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -171,7 +179,7 @@
 
   .main-nav--opened .main-nav__wrapper {
     position: absolute;
-    padding-top: 16px;
+    padding-top: 13px;
     z-index: 10;
     background: @white;
     width: 100%;
@@ -197,9 +205,9 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 11px;
+  top: 7px;
   left: auto;
-  right: 23px;
+  right: 20px;
 
   &::before,
   &::after {

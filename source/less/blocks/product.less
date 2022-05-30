@@ -1,6 +1,6 @@
 .product {
   padding-top: 21px;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
 
   @media (max-width: @mobile-width-only) {
     position: relative;
@@ -26,17 +26,18 @@
 
 .product__wrapper {
   @media (min-width: @tablet-width) {
-    padding: 8px 38px 39px 38px;
+    padding: 1px 38px 39px 37px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 38px 40px 38px;
+    margin-top: -6px;
   }
 }
 
 .product__wrapper-content {
   display: flex;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -46,24 +47,11 @@
 
 .product__illustration {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-
-  &--big {
-    align-items: baseline;
-  }
 
   @media (max-width: @mobile-width-only) {
     width: 50%;
   }
-
-  @media (min-width: @tablet-width) {
-    height: 208px;
-  }
-}
-
-.product__img-big {
-  background-position: center top 5px;
 }
 
 .product__discription {
@@ -72,7 +60,17 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 33px;
+  }
+}
+
+.product__img {
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
 
@@ -101,12 +99,12 @@
 
 .product__table {
   border-collapse: collapse;
-  margin: 9px 0 0 0;
+  margin: 14px 0 0 0;
   width: 100%;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin: 16px 0 0 0;
+    margin: 14px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -119,7 +117,7 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    padding-top: 5px;
+    padding-top: 7px;
     padding-bottom: 8px;
 
     &::before {
@@ -135,7 +133,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 5px 0 8px 2px;
+    padding: 5px 0 10px 2px;
   }
 }
 
@@ -143,6 +141,7 @@
   font-size: 12px;
   line-height: 16px;
   text-align: left;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -155,6 +154,7 @@
   line-height: 16px;
   text-align: right;
   margin-left: auto;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
